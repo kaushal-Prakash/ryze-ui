@@ -1,11 +1,11 @@
-const express = require('express')
-const dotenv = require("dotenv")
+import express from "express"
+import dotenv from "dotenv"
 dotenv.config()
 const app = express()
 const port = process.env.PORT
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send({"message":'Hello World!'})
 })
 
 app.listen(port, () => {
