@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
-import { Navbar } from "../components/ui/Navbar";
-import { Sidebar } from "../components/ui/Sidebar";
-import ChatPanel from "../components/ChatPanel";
-import CodeEditor from "../components/CodeEditor";
-import PreviewPanel from "../components/PreviewPanel";
+import { Navbar } from "@/components/ui/Navbar";
+import { Sidebar } from "@/components/ui/Sidebar";
+import CodeEditor from "@/components/CodeEditor";
+import PreviewPanel from "@/components/PreviewPanel";
+import ChatPanel from "@/components/MainPanel";
 
 export default function Page() {
   const [code, setCode] = useState("");
