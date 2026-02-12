@@ -1,6 +1,17 @@
+import { getResponse } from "./gemini.js";
+
 export async function runExplainer(plan, code) {
-  return `
-  I used a Card as the main container for structure.
-  I added a Button for user interaction.
-  `;
+  const prompt = `
+Explain in simple terms:
+- Why this layout was chosen
+- Why each component was used
+
+Plan:
+${JSON.stringify(plan, null, 2)}
+
+Generated Code:
+${code}
+`;
+
+  return await getResponse({prompt});
 }
